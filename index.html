@@ -37,10 +37,16 @@
                         <div class="card set-border">
                             <img class="img-fluid" src="images/card1.png" class="card-img-top" alt="...">
                             <div class="card-body card-bg">
-                                <h5 class="card-title text-white text-center">Lionel Messi</h5>
-                                <p class="card-text text-center player-detail">36 Goals . 120 Assist</p>
-                                <button
-                                    class="btn btn-primary d-block btn-size fw-bold text-center mx-auto">SELECT</button>
+                                <div>
+                                    <h5 class="card-title text-white text-center">Lionel Messi</h5>
+                                </div>
+                                <div>
+                                    <p class="card-text text-center player-detail">46 Goals . 130 Assist</p>
+                                </div>
+                                <div>
+                                    <button
+                                        class="btn btn-primary d-block btn-size fw-bold text-center mx-auto">SELECT</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -51,7 +57,7 @@
                             <img class="img-fluid" src="images/card2.png" class="card-img-top" alt="...">
                             <div class="card-body card-bg">
                                 <h5 class="card-title text-white text-center">Neymar Jr</h5>
-                                <p class="card-text text-center player-detail">30 Goals . 130 Assist</p>
+                                <p class="card-text text-center player-detail">40 Goals . 130 Assist</p>
                                 <button
                                     class="btn btn-primary d-block btn-size fw-bold text-center mx-auto">SELECT</button>
                             </div>
@@ -128,14 +134,15 @@
                                 class="btn btn-primary d-block btn-size fw-bold text-center w-100">Calculate</button>
 
                             <h5 class="budget mt-4">Player Expenses $<span id="total-expenses">0</span></h5>
-                            <div class="budget mt-4">Manager <input class="input-width" type="text">
+                            <div class="budget mt-4">Manager <input id="manager-feild" class="input-width" type="text">
                             </div>
-                            <div class="budget mt-4">Coach <input class="input-width ms-3" type="text">
+                            <div class="budget mt-4">Coach <input id="coach-feild" class="input-width ms-3" type="text">
                             </div>
                             <button id="final-total"
                                 class="btn btn-primary d-block btn-size fw-bold text-center w-100">Calculate
                                 Total</button>
-                            <h5 class="budget mt-4">Total $<span class="total-text-color">0</span></h5>
+                            <h5 class="budget mt-4">Total $<span id="final-expense" class="total-text-color">0</span>
+                            </h5>
                         </div>
                     </div>
                     <!-- card-8 end -->

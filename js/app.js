@@ -1,9 +1,4 @@
-// const selectButtons = document.getElementsByClassName('btn')
-// for (const selectButton of selectButtons) {
-//     selectButton.addEventListener('click', function (event) {
 
-//     })
-// }
 function getInputFeildById(inputFeildId) {
     const getInputFeild = document.getElementById(inputFeildId)
     const getInputFeildString = getInputFeild.value;
@@ -21,15 +16,23 @@ function getElementById(elementId) {
 function setValueByid(elementId, value) {
     const getElementById = document.getElementById(elementId)
     getElementById.innerText = value;
+    return getElementById
 }
 
 document.getElementById('calculate-total').addEventListener('click', function () {
     const newperPlayerAmount = getInputFeildById('per-player')
     const currentTotalExpense = newperPlayerAmount * 5
-    const prevTotalExpense = getElementById('total-expenses')
     setValueByid('total-expenses', currentTotalExpense)
 })
 
+document.getElementById('final-total').addEventListener('click', function () {
+    const getManagerFeild = getInputFeildById('manager-feild')
+    const getCoachFeild = getInputFeildById('coach-feild')
+    const newTotalExpense = getElementById('total-expenses')
+    const finalTotalExpense = getManagerFeild + getCoachFeild + newTotalExpense;
+    setValueByid('final-expense', finalTotalExpense)
+
+})
 
 
 
