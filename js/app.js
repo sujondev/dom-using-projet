@@ -15,7 +15,7 @@ function getElementById(elementId) {
     const getElementId = document.getElementById(elementId);
     const elementIdString = getElementId.innerText;
     const elementIdValue = parseFloat(elementIdString)
-    return elementIdValue
+    // return elementIdValue
 }
 
 
