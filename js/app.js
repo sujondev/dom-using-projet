@@ -18,5 +18,18 @@ function getElementById(elementId) {
     return elementIdValue
 }
 
+function setValueByid(elementId, value) {
+    const getElementById = document.getElementById(elementId)
+    getElementById.innerText = value;
+}
+
+document.getElementById('calculate-total').addEventListener('click', function () {
+    const newperPlayerAmount = getInputFeildById('per-player')
+    const currentTotalExpense = newperPlayerAmount * 5
+    const prevTotalExpense = getElementById('total-expenses')
+    setValueByid('total-expenses', currentTotalExpense)
+})
+
+
 
 
