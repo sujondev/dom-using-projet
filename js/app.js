@@ -1,27 +1,26 @@
 
-function getInputFeildById(inputFeildId) {
-    const getInputFeild = document.getElementById(inputFeildId)
-    const getInputFeildString = getInputFeild.value;
-    const getInputFeildValue = parseFloat(getInputFeildString);
-    return getInputFeildValue
-}
+function addTocart(getTheCart) {
+    const playerName = getTheCart.parentNode.parentNode.children[0].innerText
+    const btn = getTheCart;
 
-function getElementById(elementId) {
-    const getElementId = document.getElementById(elementId);
-    const elementIdString = getElementId.innerText;
-    const elementIdValue = parseFloat(elementIdString)
-    return elementIdValue
-}
-
-function setValueByid(elementId, value) {
-    const getElementById = document.getElementById(elementId)
-    getElementById.innerText = value;
-    return getElementById
+    const playerObj = {
+        playerName: playerName,
+    }
+    if (arr.length <= 4) {
+        arr.push(playerObj)
+        cartItemset(arr)
+        btn.disabled = true;
+        return
+    }
+    else {
+        alert('add 5 item')
+        return
+    }
 }
 
 document.getElementById('calculate-total').addEventListener('click', function () {
     const newperPlayerAmount = getInputFeildById('per-player')
-    const currentTotalExpense = newperPlayerAmount * 5
+    const currentTotalExpense = newperPlayerAmount * arr.length
     setValueByid('total-expenses', currentTotalExpense)
 })
 
