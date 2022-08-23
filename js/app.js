@@ -1,3 +1,17 @@
+const arr = []
+function cartItemset(addToCart) {
+    const getTableBodyByid = document.getElementById('card-item-set')
+    getTableBodyByid.innerHTML = ''
+    for (let i = 0; i < addToCart.length; i++) {
+        const player = arr[i].playerName;
+
+        const tr = document.createElement('tr')
+        tr.innerHTML = `<th>${i + 1}</th>
+        <td>${player}</td>
+        `
+        getTableBodyByid.appendChild(tr)
+    }
+}
 
 function addTocart(getTheCart) {
     const playerName = getTheCart.parentNode.parentNode.children[0].innerText
